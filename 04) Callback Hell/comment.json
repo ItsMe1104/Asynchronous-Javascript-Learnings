@@ -1,0 +1,11 @@
+{
+  "id": 5,
+  "body": "Nice idea!",
+  "postId": 212,
+  "likes": 1,
+  "user": {
+    "id": 149,
+    "username": "wyattp",
+    "fullName": "Wyatt Perry"
+  }
+}
