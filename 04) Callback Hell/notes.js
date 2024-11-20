@@ -120,10 +120,10 @@ makeHttpRequest("GET", "https://dummyjson.com/users", (all_user_data) => {
     makeHttpRequest("GET", `https://dummyjson.com/posts/${user_data.id}`, (post_data) => {
       makeHttpRequest("GET", `https://dummyjson.com/comments/${post_data.id}`, (comment_data) => {
         console.log(comment_data.user.fullName);
-      })
-    })
-  })
-})
+      });
+    });
+  });
+});
 
 
 
@@ -138,4 +138,15 @@ makeHttpRequest("GET", "https://dummyjson.com/users", (all_user_data) => {
 // 2) Disadvantages of Callback Hell :-
 
 // a) Code readability and maintainibility
-// b) Inversion of Control :- The control of our data is given to the next callback leading to a various security issue that whether that callback will call the next callback with appropriate data or not. Sometimes the subsequent callbacks are called by external APIs leading to more security issues 
+// b) Inversion of Control :- The control of our data is given to the next callback leading to a various security issue that whether that callback will call the next callback with appropriate data or not. Sometimes the subsequent callbacks are called by external APIs leading to more security issues
+// c) Code grows horizontally instead of vertically
+
+
+
+// Note :- In Browser
+//  use CTRL + R           -> Normal Reload with cache
+//  use CTRL + Shift + R   -> Hard Reload
+
+
+
+
