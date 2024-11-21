@@ -287,6 +287,12 @@ p6.then((data) => {
 
 // d) The value of the "PromiseResult" key in the promise returned by the then() or catch() is the value that is returned by the then() or catch() using the "return" keyword.
 
+// e) IMPORTANT NOTE :- Whatever the value of the PromiseResult in the returned promise is taken as an argument in the then()
+
+// Important :- If we return a normal value in then(), the then() creates a new Promise, wraps the returned data in the "PromiseResult" of that new Promise and returns it. Automatically, the value in the "Promise Result" is received in the argument of next then()
+// But if we return a Promise in itself, then the then() simply returns that promise without creating a new one. The PromiseResult value of that returned promise is received as an argument in the next then()
+
+
 
 
 // Conslusion :-
