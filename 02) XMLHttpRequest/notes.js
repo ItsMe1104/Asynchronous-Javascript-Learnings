@@ -81,3 +81,17 @@ xhr.addEventListener("load", () => {
 xhr.onload = () => {
   image.src = xhr.response.message;
 }
+
+
+
+//*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** */
+
+
+// 4) Making Synchronous API request using CRH request :-
+
+// --> In the second argurment of .open(), pass false
+// --> It will become a synchronize request, and it will block the main thread till we actually get the response back
+
+
+xhr.open("GET", "https://dog.ceo/api/breeds/image/random", false)
+xhr.send()
